@@ -1,5 +1,5 @@
-###Link to [README.md](docs/README.md)
-##Learned from the first assignment
+### Link to [README.md](docs/README.md)
+## Learned from the first assignment
   Creating github repository
   git pull - pull from git
   git push - push changes to git
