@@ -3,6 +3,9 @@
 ## Elevator Pitch
 Play a fun clicker game with your friends with **Creation Clicker**. Creation Clicker is an idle clicker game that stores your progress through a login system. 
 
+![Rough image](https://github.com/cds2005/startup/assets/144372653/54807641-4191-4caf-968b-393bec20fb75)
+
+
 ## Features
 - Login Capabilities
 - Large clickable centered item, as primary thing to click to get points
