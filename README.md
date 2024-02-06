@@ -20,3 +20,11 @@ Play a fun clicker game with your friends with **Creation Clicker**. Creation Cl
 **WebSocket:** Tell users when someone overtakes another on the leaderboard
 **React:** Transition code onto react
 
+## HTML Deliverable
+- Login framework
+- Links between pages
+- Placeholder for api
+- Plan for use of database data with unique login data also containing purchased upgrades, and time idle
+- Image used as button of main game
+- Text throughout along with small description of game on the about page
+- Websocket data holder through leaderboard and seen on main game page
