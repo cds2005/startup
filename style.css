@@ -170,3 +170,17 @@ footer {
 }
 
 
+/*leaderboard.html only css*/
+.ldrbrdMain{
+    background-color:wheat;
+    display:flex;
+    flex:3;
+    flex-direction:column;
+    align-items:center;
+
+
+}
+table{
+    width:80%;
+    border-width:50px;
+}
