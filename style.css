@@ -174,7 +174,7 @@ footer {
 .ldrbrdMain{
     background-color:wheat;
     display:flex;
-    flex:3;
+    flex:1;
     flex-direction:column;
     align-items:center;
 
@@ -183,4 +183,17 @@ footer {
 table{
     width:80%;
     border-width:50px;
+}
+
+
+.aboutMain{
+    display:flex;
+    flex: 1;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    background-color:wheat;
+    padding:50px;
+
 }
