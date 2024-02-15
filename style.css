@@ -112,3 +112,61 @@ footer {
     width:90px;
 
 }
+
+
+
+/* game.html only css*/
+.gameMain{
+    display:flex;
+    flex:1;
+    flex-direction:row;
+    background-color:wheat;
+    align-items:center;
+    margin:0;
+}
+.SL{
+    display: flex;
+    flex: 1;
+    color: #000;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:start;
+}
+.gamey{
+    flex-direction:column;
+    display:flex;
+    align-items: center;
+    flex:4 -30px;
+}
+.ldbrd{
+    flex-direction: column;
+    color:#666;
+    display: flex;
+    align-items:start;
+    justify-content:start;
+    padding: 30px;
+}
+.spacingDiv{
+    display:flex;
+    flex: 1;
+}
+.score{
+    display: flex;
+}
+.upgrade-button{
+    border:100px;
+    border-color:#9e5400;
+    border-radius:1%;
+    color:white;
+    background-color:rgb(182, 119, 3);
+    font-size:medium;
+    height:40px;
+    width:100px; 
+    margin:20px;
+}
+.butbut{
+    border:0px;
+    background-color:wheat;
+}
+
+
