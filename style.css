@@ -174,7 +174,7 @@ footer {
 
 
 /*leaderboard.html only css*/
-.ldrbrdMain{
+/*.ldrbrdMain{
     background-color:wheat;
     display:flex;
     flex:1;
@@ -182,15 +182,33 @@ footer {
     align-items:center;
     justify-content:center;
 }
+*/
 table{
-    width:80%;
+    display:flex;
+    flex:1;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background-color:wheat;
     border-width:50px;
+    height:100%;
 }
 thead{
     color:black;
-    font-size: 25;
+    font-size: 50;
     border-width: 20px;
-    margin:200px;
+    justify-content:left;
+    background-color:tan;
+    display: flex;
+    padding:1%;
+    border-bottom:50px #000;
+    border-bottom-width:50px;
+}
+th{
+    border-bottom:50px #000;
+    border-bottom-width:50px;
+    font-size: 25px;
+    justify-self:left;
 }
 
 .aboutMain{
