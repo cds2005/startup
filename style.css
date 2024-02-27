@@ -183,6 +183,7 @@ footer {
     justify-content:center;
 }
 */
+/*
 table{
     display:flex;
     flex:1;
@@ -210,7 +211,7 @@ th{
     font-size: 25px;
     justify-self:left;
 }
-
+*/
 .aboutMain{
     display:flex;
     flex: 1;
