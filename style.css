@@ -16,7 +16,7 @@ body{
     flex-direction:column;
     height: 100vh;
     margin:0;
-    
+    background-color:wheat;
 }
 header {
     display:flex;
@@ -52,6 +52,7 @@ main {
     display:flex;
     flex:1;
     flex-direction:column;
+    background-color:wheat;
 }
 .indexMain{
     display:flex;
@@ -172,46 +173,6 @@ footer {
     background-color:wheat;
 }
 
-
-/*leaderboard.html only css*/
-/*.ldrbrdMain{
-    background-color:wheat;
-    display:flex;
-    flex:1;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-}
-*/
-/*
-table{
-    display:flex;
-    flex:1;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    background-color:wheat;
-    border-width:50px;
-    height:100%;
-}
-thead{
-    color:black;
-    font-size: 50;
-    border-width: 20px;
-    justify-content:left;
-    background-color:tan;
-    display: flex;
-    padding:1%;
-    border-bottom:50px #000;
-    border-bottom-width:50px;
-}
-th{
-    border-bottom:50px #000;
-    border-bottom-width:50px;
-    font-size: 25px;
-    justify-self:left;
-}
-*/
 .aboutMain{
     display:flex;
     flex: 1;
