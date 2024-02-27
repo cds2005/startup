@@ -28,3 +28,12 @@ Play a fun clicker game with your friends with **Creation Clicker**. Creation Cl
 - Image used as button of main game
 - Text throughout along with small description of game on the about page
 - Websocket data holder through leaderboard and seen on main game page
+
+## CSS Deliverable
+- Header format and setup
+- Footer format and setup
+- Made navigation buttons for each html page
+- Responsive formatting for pages
+- Used the same font for the application
+- Styled the image for the button image that will be clicked in the clicker game
+- 
