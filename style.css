@@ -10,6 +10,9 @@ a:hover {
 a:active { 
     text-decoration: none; 
 }
+*{
+    font-family:sans-serif;
+}
 body{
     display:flex;
     flex:1;
