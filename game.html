@@ -38,9 +38,9 @@
                 </div>
             </div>
             <div class = "gamey">
-                <div class = "score">
-                    <label for="">Score</label>
-                    <input type="text" id = "count" value = "0" readonly/>
+                <div id = "score" class = "score">
+                    <text>Score:</text>
+                    <text id = "officialScore">0</text>
                 </div>
             
             <table>
@@ -61,7 +61,7 @@
                 </td>
             </table>
             <br />
-            <button class="butbut">
+            <button id = 'mainbut' class="butbut" onclick = "game.press(this)">
                 <img src ="logo.jfif" />
             </button>
             <br />
@@ -81,5 +81,6 @@
                 <button class="footBut">GitHub</button>
             </a>
         </footer>
+        <script src="game.js"></script>
     </body>
 </html>
