@@ -45,20 +45,27 @@
             
             <table>
                 <td>
-                    <button class = "upgrade-button">Upgrade 1</button>
+                    <button class = "upgrade-button" onclick = "game.upgrd1()">
+                        <text>Increase Points<br>Multiplier<br>Cost: <text id = "upgrade1Cost">1</text><br>Current: <text id = "upgrade1Current">0</text>%</text>
+                    </button>
                 </td>
                 <td>
-                    <button class = "upgrade-button">Upgrade 2</button>
+                    <button class = "upgrade-button" onclick = "game.upgrd1()">
+                        <text>Increase Damage<br>Base<br>Cost: <text id = "upgrade2Cost">1</text><br>Current: <text id = "upgrade2Current">1</text></text>
+                    </button>
                 </td>
                 <td>
-                    <button class = "upgrade-button">Upgrade 3</button>
-                </td>
+                    <button class = "upgrade-button" onclick = "game.upgrd1()">
+                        <text>Increase Damage<br>Multiplier<br>Cost: <text id = "upgrade3Cost">1</text><br>Current: <text id = "upgrade3Current">0</text>%</text>
+                    </button>                </td>
                 <td>
-                    <button class = "upgrade-button">Upgrade 4</button>
-                </td>
+                    <button class = "upgrade-button" onclick = "game.upgrd1()">
+                        <text>Decrease Enemy<br>Health<br>Cost: <text id = "upgrade1Cost">1</text><br>Current: <text id = "upgrade1Current">0</text></text>
+                    </button>                </td>
                 <td>
-                    <button class = "upgrade-button">Upgrade 5</button>
-                </td>
+                    <button class = "upgrade-button" onclick = "game.upgrd1()">
+                        <text>Prestige to increase enemy health, and base income.</text>
+                    </button>                </td>
             </table>
             <br />
             <button id = 'mainbut' class="butbut" onclick = "game.pressMain(this)">
