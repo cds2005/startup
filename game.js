@@ -31,15 +31,28 @@ class Game{
 
         if (this.health <1){
             this.score += this.scoreAdd;
-            this.updateScore();
+            this.updateText("officialScore",this.score);
             this.health = this.standardHealth;
         }
-        const healthEl = document.getElementById("officialHealth");
-        healthEl.textContent = this.health
+        this.updateText("officialHealth",this.health)
     }
-    updateScore() {
-        const scoreEl = document.getElementById('officialScore');
-        scoreEl.textContent = this.score;
+    updateText(id,x) {
+        document.getElementById(id).textContent = x;
+    }
+    upgrd1(){
+
+    }
+    upgrd2(){
+
+    }
+    upgrd3(){
+
+    }
+    upgrd4(){
+
+    }
+    prestige(){
+
     }
     
 }
