@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class = "gamey">
-                <div id = "score" class = "score">
+                <div id = "score" class = "values">
                     <text>Creation Points:</text>
                     <text id = "officialScore">0</text>
                 </div>
@@ -59,8 +59,8 @@
                         <text>Increase Damage<br>Multiplier<br>Cost: <text id = "upgrade3Cost">1</text><br>Current: <text id = "upgrade3Current">0</text>%</text>
                     </button>                </td>
                 <td>
-                    <button class = "upgrade-button" onclick = "game.prestige(this)">
-                        <text>Prestige to increase enemy health, and base income.</text>
+                    <button id = "jjj" class = "upgrade-button" onclick = "game.prestige(this)">
+                        <text>Prestige to increase enemy health, and base income.(don't do to early)</text>
                     </button>                </td>
                 <td>
                     <button class = "upgrade-button" onclick = "game.save(this)">
@@ -73,7 +73,7 @@
             </button>
             <br />
             <br />
-            <div class = "health">
+            <div class = "values">
                 <text>Health:</text>
                 <text id = "officialHealth">10</text>
             </div>

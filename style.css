@@ -120,6 +120,11 @@ footer {
 
 
 /* game.html only css*/
+.values{
+    color:#9e5400;
+    font-size: 32px;
+
+}
 .gameMain{
     display:flex;
     flex:1;
@@ -175,7 +180,9 @@ footer {
     border:0px;
     background-color:wheat;
 }
-
+#jjj{
+    font-size:small;
+}
 .aboutMain{
     display:flex;
     flex: 1;

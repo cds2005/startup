@@ -26,21 +26,28 @@ class Game{
               this.buttons.set(el.id, new Button(el));
           });
     }
+
     pressMain(button){
         this.updateHealth()
     }
+
     updateHealth(){
-        this.health = this.health-this.dmg;
+        this.health = this.health-this.damage();
 
         if (this.health <1){
-            this.score += this.scoreAdd;
+            this.score += Math.round((this.scoreAdd)*(1+((this.upgrdValues[0]-1)/10)));
             this.updateText("officialScore",this.score);
             this.health = this.standardHealth;
         }
         this.updateText("officialHealth",this.health)
     }
+
     updateText(id,x) {
         document.getElementById(id).textContent = x;
+    }
+
+    damage(){
+        return Math.round(this.dmg*(1+this.upgrdValues[1]/10));
     }
     upgrd1(){
         if (this.score >= this.upgrdValues[0]**2){
@@ -51,6 +58,7 @@ class Game{
             this.updateText("upgrade1Current",(this.upgrdValues[0]-1)*10)
         }
     }
+
     upgrd2(){
         if (this.score >= this.upgrdValues[1]**3){
             this.score = this.score-(this.upgrdValues[1]**3);
@@ -61,19 +69,23 @@ class Game{
             this.updateText("upgrade2Current",this.dmg)
         }
     }
+
     upgrd3(){
-        if (this.score >= this.upgrdValues[1]**3){
-            this.score = this.score-(this.upgrdValues[1]**3);
+        if (this.score >= this.upgrdValues[2]**2){
+            this.score = this.score-(this.upgrdValues[2]**2);
             this.updateText("officialScore", this.score);
-            this.upgrdValues[1]+=1;
-            this.dmg +=this.upgrdValues[1]**2
-            this.updateText("upgrade2Cost",this.upgrdValues[1]**3)
-            this.updateText("upgrade2Current",this.dmg)
+            this.updateText("upgrade3Current",this.upgrdValues[2]*10);
+            this.upgrdValues[2]+=1;
+            this.updateText("upgrade3Cost",this.upgrdValues[2]**2);
         }
     }
-    prestige(){
 
+    prestige(){
+        this.score = 0;
+        this.standardHealth = this.standardHealth*100;
+        this.scoreAdd = this.scoreAdd*10;
     }
+
     save(){
 
     }
