@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
+        <script src = "home.js"></script>
         <link rel="stylesheet" type = "text/css" href = "style.css">
         <meta charset ="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,15 +29,15 @@
         </header>
         <main class = "indexMain">
             <h2>Welcome</h2>
-            <form method = "get" action="play.html">
+                <div class = "overallLogin">
                 <div class = "login">
                     <input type="text" id = "username" placeholder = "username">
                 </div>
                 <div class = "login">
                     <input type="text" id = "password" placeholder = "password">
-                    <button class = "logBut" type = "submit">Login</button>
+                    <button class = "logBut" type = "submit" onclick = "login()">Login</button>
                 </div>
-            </form>
+                </div>
             <p>
                 Image api placeholder for attractive and varied login experience
             </p>

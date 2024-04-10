@@ -72,13 +72,18 @@ form{
     align-items:start;
     flex-direction:column;
 }
+.overallLogin{
+    display:flex;
+    align-items:start;
+    flex-direction:column;
+}
 .login{
     display:flex;
-    align-items:center;
+    align-items:start;
     background-color:wheat;
     border-color:#9e5400;
     color: #9e5400;
-    margin:5px;
+    margin:px;
 }
 input{
     display:flex;
