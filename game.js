@@ -100,29 +100,36 @@ class Game{
         if (scoresText) {
         scores = JSON.parse(scoresText);
         }
-        scores = this.updateScores(username, this.score, scores, this.upgrdValues);
+        scores = this.updateUser(username, this.score, scores, this.upgrdValues);
 
         localStorage.setItem('scores', JSON.stringify(scores));
     }
-    updateUser(username,score,scores,upgrdValues){
+
+    updateUser(username, score, scores, upgrdValues) {
         const date = new Date().toLocaleDateString();
-        const newScore = { name: username, score: score, date: date, values:upgrdValues };
-
+        const newScore = { name: username, score: score, date: date, values: upgrdValues };
+    
         let found = false;
-        for (const [i, prevScore] of scores.entries()) {
-        if (score > prevScore.score) {
-            scores.splice(i, 0, newScore);
-            found = true;
-            break;
+        for (let i = 0; i < scores.length; i++) {
+            if (scores[i].name === username) {
+                // Update the existing score if it's higher than the previous one
+                if (score > scores[i].score) {
+                    scores[i].score = score;
+                    scores[i].date = date;
+                    scores[i].values = upgrdValues;
+                }
+                found = true;
+                break;
+            }
         }
-        }
-
+    
         if (!found) {
-        scores.push(newScore);
+            // If username not found, add the new score
+            scores.push(newScore);
         }
-
+    
         return scores;
-        }
+    }
     }
     
 
