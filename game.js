@@ -25,11 +25,11 @@ class Game{
         document.querySelectorAll('.butbut').forEach((el) => {
               this.buttons.set(el.id, new Button(el));
           });
-        this.updateText("playerName",localStorage.getItem("username"))
+        this.updateText("playerName",getPlayerName());
     }
 
     pressMain(button){
-        this.updateHealth()
+        this.updateHealth();
     }
 
     updateHealth(){
@@ -40,7 +40,7 @@ class Game{
             this.updateText("officialScore",this.score);
             this.health = this.standardHealth;
         }
-        this.updateText("officialHealth",this.health)
+        this.updateText("officialHealth",this.health);
     }
 
     updateText(id,x) {
@@ -55,8 +55,8 @@ class Game{
             this.score = this.score-(this.upgrdValues[0]**2);
             this.updateText("officialScore", this.score);
             this.upgrdValues[0]+=1;
-            this.updateText("upgrade1Cost",this.upgrdValues[0]**2)
-            this.updateText("upgrade1Current",(this.upgrdValues[0]-1)*10)
+            this.updateText("upgrade1Cost",this.upgrdValues[0]**2);
+            this.updateText("upgrade1Current",(this.upgrdValues[0]-1)*10);
         }
     }
 
@@ -65,9 +65,9 @@ class Game{
             this.score = this.score-(this.upgrdValues[1]**3);
             this.updateText("officialScore", this.score);
             this.upgrdValues[1]+=1;
-            this.dmg +=this.upgrdValues[1]**2
-            this.updateText("upgrade2Cost",this.upgrdValues[1]**3)
-            this.updateText("upgrade2Current",this.dmg)
+            this.dmg +=this.upgrdValues[1]**2;
+            this.updateText("upgrade2Cost",this.upgrdValues[1]**3);
+            this.updateText("upgrade2Current",this.dmg);
         }
     }
 
@@ -82,19 +82,51 @@ class Game{
     }
 
     prestige(){
-        this.score = 0;
-        this.standardHealth = this.standardHealth*100;
-        this.scoreAdd = this.scoreAdd*10;
+        for(i = 0; i<upgrdValues[3];i++){
+            this.score = 0;
+            this.standardHealth = this.standardHealth*100;
+            this.scoreAdd = this.scoreAdd*10;
+        }
     }
 
     name(){
         return localStorage.getItem('username') ?? 'Anonymous';
     }
-
+    getPlayerName() {
+        return localStorage.getItem('username') ?? 'Mystery player';
+    }
     save(){
+        const username = getPlayerName();
+        let scores = [];
+        const scoresText = localStorage.getItem('scores');
+        if (scoresText) {
+        scores = JSON.parse(scoresText);
+        }
+        scores = this.updateScores(username, this.score, scores, this.upgrdValues);
 
+        localStorage.setItem('scores', JSON.stringify(scores));
+    }
+    updateUser(username,score,scores,upgrdValues){
+        const date = new Date().toLocaleDateString();
+        const newScore = { name: username, score: score, date: date, values:upgrdValues };
+
+        let found = false;
+        for (const [i, prevScore] of scores.entries()) {
+        if (score > prevScore.score) {
+            scores.splice(i, 0, newScore);
+            found = true;
+            break;
+        }
+        }
+
+        if (!found) {
+        scores.push(newScore);
+        }
+
+        return scores;
+        }
     }
     
-}
+
 
 const game = new Game();
