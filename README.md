@@ -36,4 +36,12 @@ Play a fun clicker game with your friends with **Creation Clicker**. Creation Cl
 - Responsive formatting for pages
 - Used the same font for the application
 - Styled the image for the button image that will be clicked in the clicker game
+
+
+## JAVA Deliverable
+- Created simple clicker game
+- Simulated WebSocket Messages
+- Accessed DOM and saved data with local storage
+- Created Leaderboard
+- Takes local username data and displays it
 - 
