@@ -25,6 +25,7 @@ class Game{
         document.querySelectorAll('.butbut').forEach((el) => {
               this.buttons.set(el.id, new Button(el));
           });
+        this.updateText("playerName",localStorage.getItem("username"))
     }
 
     pressMain(button){
@@ -84,6 +85,10 @@ class Game{
         this.score = 0;
         this.standardHealth = this.standardHealth*100;
         this.scoreAdd = this.scoreAdd*10;
+    }
+
+    name(){
+        return localStorage.getItem('username') ?? 'Anonymous';
     }
 
     save(){
