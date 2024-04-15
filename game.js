@@ -25,7 +25,7 @@ class Game{
         document.querySelectorAll('.butbut').forEach((el) => {
               this.buttons.set(el.id, new Button(el));
           });
-        this.updateText("playerName",getPlayerName());
+        this.updateText("playerName",localStorage.getItem('username') ?? 'Anonymous');
     }
 
     pressMain(button){
@@ -92,11 +92,9 @@ class Game{
     name(){
         return localStorage.getItem('username') ?? 'Anonymous';
     }
-    getPlayerName() {
-        return localStorage.getItem('username') ?? 'Mystery player';
-    }
+
     save(){
-        const username = getPlayerName();
+        const username = this.name();
         let scores = [];
         const scoresText = localStorage.getItem('scores');
         if (scoresText) {
@@ -130,3 +128,11 @@ class Game{
 
 
 const game = new Game();
+
+setInterval(() => {
+    const score = Math.floor(Math.random() * 3000);
+    const chatText = document.querySelector('#ldbrd');
+    chatText.innerHTML =
+      `<div class="update"><span>Caleb Lawlor</span> scored ${score}</div>` +
+      chatText.innerHTML;
+  }, 1000);
