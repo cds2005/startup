@@ -1,0 +1,12 @@
+{
+  "name": "startup",
+  "version": "1.0.0",
+  "description": "Play a fun clicker game with your friends with **Creation Clicker**. Creation Clicker is an idle clicker game that stores your progress through a login system. \r ![Rough image](https://github.com/cds2005/startup/assets/144372653/54807641-4191-4caf-968b-393bec20fb75)\r ## Features\r - Login Capabilities\r - Large clickable centered item, as primary thing to click to get points\r - Buttons for upgrade options, with exponential price cost for scaling\r - Prestige button for score multiplier\r - Store info through login and calculate idle score based on personal info\r - Leaderboard, and notification to all players when one passes another",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
