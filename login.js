@@ -5,4 +5,4 @@ function login() {
     localStorage.setItem("password",passEl.value)
     window.location.href = "game.html";
 }
-  
+   
