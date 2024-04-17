@@ -1,1 +1,5 @@
-~/CS260/startup/dbConfig.json
+.vscode/
+.DS_Store
+node_modules/
+dist/
+dbConfig.json
