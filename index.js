@@ -38,25 +38,24 @@ app.listen(port, () => {
 // The high scores are saved in memory and disappear whenever the service is restarted.
 let scores = [];
 function updateScores(newScore, scores) {
-    let found = false;
-    for (let i = 0; i < scores.length; i++) {
-        if (scores[i].name === username) {
-            // Update the existing score if it's higher than the previous one
-            if (score > scores[i].score) {
-                scores[i].score = score;
-                scores[i].date = date;
-                scores[i].values = upgrdValues;
-            }
-            found = true;
-            break;
-        }
+  let found = false;
+  for (const [i, prevScore] of scores.entries()) {
+    if (newScore.score > prevScore.score) {
+      scores.splice(i, 0, newScore);
+      found = true;
+      break;
     }
+  }
 
-    if (!found) {
-        // If username not found, add the new score
-        scores.push(newScore);
-    }
+  if (!found) {
+    scores.push(newScore);
+  }
 
-    return scores;
+  if (scores.length > 10) {
+    scores.length = 10;
+  }
+
+  return scores;
 }
+
 
