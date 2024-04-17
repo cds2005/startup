@@ -29,6 +29,7 @@
         </header>
         <main class = "indexMain">
             <h2>Welcome</h2>
+            <!--
                 <div class = "overallLogin">
                 <div class = "login">
                     <input type="text" id = "username" placeholder = "username">
@@ -38,6 +39,29 @@
                     <button class = "logBut" type = "submit" onclick = "login()">Login</button>
                 </div>
                 </div>
+            -->
+
+
+
+                <div id="loginControls" style = "display: block" class = "overallLogin">
+                    <div class="login">
+                        <input type="text" id = "username" placeholder = "username">
+                    </div>
+                    <div class="login">
+                        <input type="text" id = "password" placeholder = "password">
+                    </div>
+                    <button type="button" class="logBut" onclick="loginUser()">Login</button>
+                    <button type="button" class="logBut" onclick="createUser()">Create</button>
+                  </div>
+                  <!-- Displayed when ready to play -->
+                  <div id="playControls" style="display: none">
+                    <div id="playerName"></div>
+                    <button type="button" class="logBut" onclick="play()">Play</button>
+                    <button type="button" class="logBut" onclick="logout()">Logout</button>
+                  </div>
+
+
+
 
             <hr/>
         </main>
@@ -47,5 +71,5 @@
             </a>
         </footer>
     </body>
-
+    <script src="login.js"></script>
 </html>
