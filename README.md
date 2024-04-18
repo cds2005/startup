@@ -44,4 +44,32 @@ Play a fun clicker game with your friends with **Creation Clicker**. Creation Cl
 - Accessed DOM and saved data with local storage
 - Created Leaderboard
 - Takes local username data and displays it
-- 
+
+## Service deliverable
+
+➡️ The following is an example of the required information for the `Startup Service` deliverable
+
+For this deliverable I added backend endpoints that receives votes and returns the voting totals.
+
+-  Node.js/Express HTTP service
+- Static middleware for frontend
+- Calls to third party endpoints
+- Backend service endpoints
+- Frontend calls service endpoints
+
+## DB/Login deliverable
+
+
+- MongoDB Atlas database created
+- Stores data in MongoDB
+- User registration
+- existing user
+- Use MongoDB to store credentials
+- Restricts functionality
+
+## WebSocket deliverable
+
+- Backend listens for WebSocket connection
+- Frontend makes WebSocket connection
+- Data sent over WebSocket connection
+- WebSocket data displayed
